@@ -13,7 +13,6 @@ function SpotList({ tech, navigation }) {
                 params: { tech }
             })
             setSpots(response.data)
-            console.log(response.data)
 
         }
 
@@ -47,7 +46,7 @@ function SpotList({ tech, navigation }) {
                             style={styles.price}>
                             {item.price ? `R$${item.price}/dia` : 'Na faixa mano'}
                         </Text>
-                        <TouchableOpacity onPress={()=>handleNavigate(item._id)} style={styles.button}>
+                        <TouchableOpacity onPress={() => handleNavigate(item._id)} style={styles.button}>
                             <Text style={styles.buttonText}>Solicitar Reserva</Text>
                         </TouchableOpacity>
                     </View>
